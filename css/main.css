@@ -60,16 +60,50 @@ header{
 .fixed-header{
 	width:85%;
 	position:fixed;
-	z-index: 1;
+	z-index: 2;
 }
 
-.featured_img{
+/*.featured_img{
 	width:100%;
 	height:auto;
 	display:block;
 	margin:0px;
 	box-shadow: -1px 10px 22px -5px rgba(56,55,56,0.74);
 }
+*/
+
+.rslides {
+  position: relative;
+  z-index:1;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
 
 .feature{
 	padding:15px 50px;
@@ -108,7 +142,7 @@ h3{
 
 h3 a{
 	padding-bottom: 5px;
-	border-bottom: 3px solid lightblue;
+	border-bottom: 3px solid #8fb8c1;
 }
 
 
@@ -138,7 +172,7 @@ h2{
 }
 
 p{
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 300;
   text-align:justify;
@@ -185,7 +219,7 @@ p{
 
 @media all and (min-width: 600px) {
   .module h2 {
-    font-size: 42px;
+    font-size: 32px;
   }
   .module p {
     font-size: 1.1rem;
@@ -198,6 +232,27 @@ p{
   .module.parallax h1 {
     font-size: 120px;
   }
+
+.grid-container{
+	padding:15px;
+	min-height: 300px;
+}
+
+.grid-column {
+    float:left;
+    margin:0;
+    padding:0 20px; /* match to .grid-container */
+    border:1px solid;
+    min-height:100px;
+}
+
+.grid-quarter{
+	display:inline-block;
+	width:22%;
+	margin: 10px;
+	min-height: 250px;
+	border:1px solid darkgrey;
+	background-color:darkgrey;
 }
 
 #map{
@@ -214,6 +269,30 @@ label{
 	width:150px;
 	padding-right: 20px;
 	vertical-align: top;
+}
+
+.submit-button {
+  border:1px solid #8fb8c1;
+  background:lightblue;
+  padding:10px 50px;
+}
+
+.form-input {
+  display:inline-block;
+  width:200px;
+  border:1px solid lightgrey;
+  border-radius:3px;
+  padding:8px;
+  transition:all 0.3s ease-in-out;
+}
+.form-input:focus {
+  border-color:#000;
+  background-color:#fff;
+  outline:0;
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+.form-field {
+  margin-bottom:10px;
 }
 
 footer{
